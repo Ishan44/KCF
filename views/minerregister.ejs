@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/minerregistration.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <%- include("partials/navbar"); -%>
+
+
+    <div class="container">
+        <form action="/minerregister" method="post" class="registration">
+            <h1>Miner Registration Form</h1>
+
+
+            <label for="username">
+                <span>Name</span>
+
+                <input type="text" id="username" name="username" minlength="3" required>
+
+                <ul class="input-requirements">
+                    <li>At least 3 characters long</li>
+                    <li>Must only contain letters and numbers (no special characters)</li>
+                </ul>
+            </label>
+
+            <label for="age">
+                <span>Age</span>
+
+                <input type="number" id="age" name="age" minlength="2" required>
+
+                <ul class="input-requirements">
+                    <li>Age Must be 2 characters long</li>
+
+                </ul>
+            </label>
+
+            <label for="contact">
+                <span>Contact</span>
+
+                <input type="text" id="contact" name="contact" minlength="10" required>
+
+                <ul class="input-requirements">
+                    <li>At least 10 characters long</li>
+                </ul>
+            </label>
+
+            <label for="address">
+                <span>Address</span>
+
+                <input type="text" id="address" name="address" minlength="3" required>
+
+
+            </label>
+
+            <label for="econtact">
+                <span>Emergency Contact</span>
+
+                <input type="text" id="econtact" name="econtact" minlength="3" required>
+                <ul class="input-requirements">
+                    <li>At least 10 characters long</li>
+                </ul>
+            </label>
+
+            <label for="relationship">
+                <span>Relationship</span>
+
+                <input type="text" id="relationship" name="relationship" minlength="3" required>
+
+
+            </label>
+
+
+            <br>
+
+            <input type="submit">
+
+        </form>
+    </div>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script>
+        var lkl = '<%=lol%>';
+        console.log(lkl);
+        if (lkl == 'lmo') {
+
+
+            swal({
+                title: "Good job!",
+                text: "You clicked the button!",
+                icon: "success",
+                button: "Aww yiss!",
+            });
+        }
+    </script>
+
+    <%- include("partials/navbarfooter"); -%>
+
+</body>
+
+</html>

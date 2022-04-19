@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/minerregistration.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <%- include("partials/navbar"); -%>
+
+
+    <div class="container">
+
+        <form action="/helmetregister" method="post" class="registration">
+            <h1>Helmet Registration Form</h1>
+
+
+            <label for="MinerID">
+                <span>Miner ID</span>
+
+                <input type="text" id="MinerID" name="minerid" required>
+
+            </label>
+
+            <label for="MacID">
+                <span>Mac ID</span>
+
+                <input type="text" id="MacID" name="macid" required>
+
+            </label>
+
+            <label for="Gas">
+                <span>Gas</span>
+
+                <input type="text" id="Gas" name="gas" required>
+            </label>
+
+            <label for="Gyro">
+                <span>Gyro</span>
+
+                <input type="text" id="Gyro" name="gyro" required>
+            </label>
+
+            <label for="Temperature">
+                <span>Temperature</span>
+
+                <input type="text" id="Temperature" name="temperature" required>
+
+
+            </label>
+
+            <br>
+
+            <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <%- include("partials/navbarfooter"); -%>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script>
+        //alert("hi")
+        // document.getElementById("submit").addEventListener('click', () => {
+        //     // var name = document.querySelector("#")
+        //     // alert("henlo")
+        //     swal({
+        //         title: "Good job!",
+        //         text: "You clicked the button!",
+        //         icon: "success",
+        //         button: "Aww yiss!",
+        //     });
+        // })
+
+        // document.getElementsByClassName("swal-button--confirm")[0].addEventListener('click',()=>{
+
+        // })
+        var lkl = '<%=lol%>';
+        console.log(lkl);
+        if (lkl == 'lmo') {
+
+
+            swal({
+                title: "Good job!",
+                text: "You clicked the button!",
+                icon: "success",
+                button: "Aww yiss!",
+            });
+        }
+
+        // function validate() {
+        //     //alert("Form submitted succ")
+
+        // swal({
+        //     title: "Good job!",
+        //     text: "You clicked the button!",
+        //     icon: "success",
+        //     button: "Aww yiss!",
+        // });
+
+        //     return true;
+        // }
+    </script>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</body>
+
+</html>
